@@ -153,7 +153,7 @@ node {
     stage 'Build'
     sh "docker build -t mesosphere/vny:${gitCommit()} ."
 
-    // Log in and push image to GitLab
+    // Log in and push image to Docker Hub
     stage 'Publish'
     withCredentials(
         [[
